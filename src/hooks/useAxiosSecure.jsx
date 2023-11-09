@@ -4,7 +4,7 @@ import useAuth from "./useAuth";
 import { useNavigate } from "react-router-dom";
 
 export const axiosSecure = axios.create({
-    baseURL:  'http://localhost:5000',
+    baseURL:  'https://car-doctor-server-gamma-sage.vercel.app',
     withCredentials: true
 })
 const useAxiosSecure = () => {
