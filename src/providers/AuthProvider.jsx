@@ -38,13 +38,13 @@ const AuthProvider = ({ children }) => {
             if (currentUser) {
                 
                 console.log(loggedEmail);
-                axios.post('https://car-doctor-server-fybxd8hdw-mahfuj113.vercel.app/jwt', loggedEmail, { withCredentials: true })
+                axios.post('http://localhost:5000/jwt', loggedEmail, { withCredentials: true })
                     .then(res => {
                         console.log('token response', res.data);
                     })
             }
             else{
-                axios.post('https://car-doctor-server-fybxd8hdw-mahfuj113.vercel.app/logout',loggedEmail, {withCredentials: true})
+                axios.post('http://localhost:5000/logout',loggedEmail, {withCredentials: true})
                 .then(res => {
                     console.log(res.data);
                 })
